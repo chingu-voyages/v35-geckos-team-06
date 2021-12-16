@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
-import {useNavigate} from 'react-router';
+import { useNavigate } from 'react-router-dom'
+
+
+
 
 const TrackSearchResultContainer = styled.div`
   display: flex;
@@ -15,21 +18,24 @@ const Title = styled.div``;
 const Artists = styled.div``;
 
 const TrackSearchResult = ({track}) => {
-    const navigate=useNavigate()
+  const navigate= useNavigate()
     return (
         <TrackSearchResultContainer
-            key={track.uri}
-            onClick={()=>
-            navigate(`/library/${track.uri}`, {
-                state: {type: `${track.title}`},
+          onClick={()=>{
+            navigate("/nowplaying" , {
+              state: {track}
             })
-            }
-            >
+          }}
+        >
+            
+            
+          
             <img src={track.albumUrl} style={{height:'64px', width: '64px'}} alt=''/>
             <TrackInfo>
             <Title>{track.title}</Title>
             <Artists>{track.artists}</Artists>
             </TrackInfo>
+            
         </TrackSearchResultContainer>
     )
 }

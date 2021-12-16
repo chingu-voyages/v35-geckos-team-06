@@ -45,13 +45,10 @@ const Header = () => {
             },
             track.album.images[0]
           );
+          console.log(track)
 
-          return {
-            artists: track.artists[0].name,
-            title: track.name,
-            uri: track.uri,
-            albumUrl: smallestAlbumImage.url,
-          };
+          return {track};
+          
         })
       );
     });
@@ -79,7 +76,7 @@ const Header = () => {
       {search.length > 0 && (
         <SearchResultContainer>
           {searchResults.map((track) => (
-            <TrackSearchResult track={track} key={track.url} />
+            <TrackSearchResult track={track} key={track.url} id={track.id} />
           ))}
         </SearchResultContainer>
       )}
