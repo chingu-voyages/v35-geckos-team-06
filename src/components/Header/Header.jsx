@@ -11,6 +11,7 @@ import { Search } from '@styled-icons/fluentui-system-filled';
 import { UserContext } from '../../contexts/UserContext';
 import SpotifyWebApi from 'spotify-web-api-node';
 
+
 const SpotifyApi= new SpotifyWebApi({
   clientId: 'f573531847c5435e80f1ba528eceed98'
   
@@ -23,6 +24,7 @@ const Header = () => {
   const [searchResults, setSearchResults] = useState([]);
   const { userData } = useContext(UserContext);
   const {token} = userData;
+  
  
 
   
@@ -72,18 +74,18 @@ const Header = () => {
       <SearchBarContainer>
         <Input 
           type='search'
-          placeholder='search Songs/Artists' 
+          placeholder='search Songs/Artists/Albums' 
           value={search}
           onChange={(e)=>setSearch(e.target.value)}/>
         <Search size={24} />
       </SearchBarContainer>
-      {/* <ProfilePic
+      <ProfilePic
         src={
           userData.data.images?.[0]?.url ||
           'https://puu.sh/IsNdG/069cf308d1.png'
         }
         alt='user avatar'
-      /> */}
+      /> 
       <SearchResultContainer>
       {searchResults.map((track)=>(
         <TrackSearchResult track={track} key={track.url}/>
