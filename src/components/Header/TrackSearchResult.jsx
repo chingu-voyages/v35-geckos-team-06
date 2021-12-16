@@ -1,17 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const TrackSearchResultContainer = styled.div`
-  display: flex;
-  margin: 2;
-  align-items: center;
-  cursor: pointer;
-`;
-const TrackInfo = styled.div`
-  margin-left: 3;
-`;
-const Title = styled.div``;
-const Artists = styled.div``;
+import {
+  Artists,
+  Title,
+  TrackCover,
+  TrackInfo,
+  TrackSearchResultContainer,
+} from '../../styled/SearchBar';
 
 const TrackSearchResult = ({ track, chooseTrack }) => {
   const handlePlay = () => {
@@ -19,11 +13,7 @@ const TrackSearchResult = ({ track, chooseTrack }) => {
   };
   return (
     <TrackSearchResultContainer onClick={handlePlay}>
-      <img
-        src={track.albumUrl}
-        style={{ height: '64px', width: '64px' }}
-        alt=''
-      />
+      <TrackCover src={track.albumUrl} alt='track album cover' />
       <TrackInfo>
         <Title>{track.title}</Title>
         <Artists>{track.artists}</Artists>
