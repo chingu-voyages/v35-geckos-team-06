@@ -7,12 +7,13 @@ import { useNavigate } from 'react-router-dom'
 
 const TrackSearchResultContainer = styled.div`
   display: flex;
-  margin: 2;
+  margin: 2px;
   align-items: center;
   cursor: pointer;
+  
 `;
 const TrackInfo = styled.div`
-  margin-left: 3;
+  margin-left: 3px;
 `;
 const Title = styled.div``;
 const Artists = styled.div``;
@@ -28,7 +29,7 @@ const TrackSearchResult = ({track}) => {
           }}
         >
             
-            <img src={track.albumUrl} style={{height:'64px', width: '64px'}} alt=''/>
+            <img src={track.albumUrl} style={{height:'64px', width: '64px', borderRadius: '10px'}} alt=''/>
             <TrackInfo>
             <Title>{track.title}</Title>
             <Artists>{track.artists}</Artists>

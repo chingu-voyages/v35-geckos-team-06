@@ -48,7 +48,7 @@ const Header = () => {
           console.log(track)
 
           return { 
-            artist: track.artists[0].name,
+            artists: track.artists[0].name,
             title: track.name,
             uri: track.uri,
             albumUrl: smallestAlbumImage.url,
