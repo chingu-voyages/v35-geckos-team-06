@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom'
 
@@ -28,8 +28,6 @@ const TrackSearchResult = ({track}) => {
           }}
         >
             
-            
-          
             <img src={track.albumUrl} style={{height:'64px', width: '64px'}} alt=''/>
             <TrackInfo>
             <Title>{track.title}</Title>

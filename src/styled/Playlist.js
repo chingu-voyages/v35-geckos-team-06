@@ -54,7 +54,7 @@ export const PlaylistCover = styled.img`
   border-radius: 25%;
   margin-top: 40px;
   align-self: center;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 0px 4px 1px rgba(0, 14, 51, 0.2);
   @media screen and (min-width: 1024px) {
     margin-top: 0;
     margin-right: 24px;
