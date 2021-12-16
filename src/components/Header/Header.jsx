@@ -47,7 +47,13 @@ const Header = () => {
           );
           console.log(track)
 
-          return {track};
+          return { 
+            artist: track.artists[0].name,
+            title: track.name,
+            uri: track.uri,
+            albumUrl: smallestAlbumImage.url,
+            id: track.id
+          };
           
         })
       );
