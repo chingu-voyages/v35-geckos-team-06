@@ -71,5 +71,15 @@ export const ProfilePic = styled.img`
 `;
 
 export const SearchResultContainer = styled.div`
-  
-`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 12.5vw;
+  width: 75vw;
+  height: 500px;
+  overflow: hidden;
+  top: 100px;
+  background: var(--lt-navbar-background);
+  font: var(--font-body-small-bold);
+  color: var(--lt-body-font-bold);
+`;

@@ -1,20 +1,18 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 import styled from 'styled-components';
+import {useNavigate} from 'react-router';
 
-const TrackSearchResultContainer=styled.div`
-    display: flex;
-    margin: 2;
-    align-items: center;
-    cursor: pointer;
-`
-const TrackInfo=styled.div`
-    margin-left: 3;
-`
-const Title=styled.div``
-const Artists=styled.div`
-    
-`
+const TrackSearchResultContainer = styled.div`
+  display: flex;
+  margin: 2;
+  align-items: center;
+  cursor: pointer;
+`;
+const TrackInfo = styled.div`
+  margin-left: 3;
+`;
+const Title = styled.div``;
+const Artists = styled.div``;
 
 const TrackSearchResult = ({track}) => {
     const navigate=useNavigate()
@@ -36,4 +34,4 @@ const TrackSearchResult = ({track}) => {
     )
 }
 
-export default TrackSearchResult
+export default TrackSearchResult;
