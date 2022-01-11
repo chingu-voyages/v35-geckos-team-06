@@ -6,6 +6,7 @@ import circleLight from './img/circle-light.svg';
 import circleDark from './img/circle-dark.svg';
 import wave from './img/wave.svg';
 import { ControllerFastBackward } from '@styled-icons/entypo/';
+
 export const StyledWrapper = styled.div`
   background: var(--lt-background);
   grid-column: 1 / -1;
@@ -65,9 +66,9 @@ export const CenterContainer = styled.div`
 // Welcome Page
 
 export const ButtonContainer = styled.div`
-  margin: 25% auto;
-  width: 162px;
-  height: 162px;
+  margin: 24% auto;
+  width: 163px;
+  height: 163px;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -123,7 +124,7 @@ export const Circle = styled.img.attrs(() => ({
   }
 
   @media (min-width: 375px) {
-    top: 4.5%;
+    top: 4.2%;
   }
 
   @media (min-width: 414px) {
@@ -147,10 +148,10 @@ export const Circle = styled.img.attrs(() => ({
     top: 8.5%;
   }
   @media (min-width: 1440px) {
-    top: 14%;
+    top: 15%;
   }
   @media (min-width: 1920px) {
-    top: 18%;
+    top: 21%;
   }
 `;
 
@@ -215,10 +216,10 @@ export const WaveLeft = styled.img.attrs(() => ({
   }
   @media (min-width: 1440px) {
     top: 36%;
-    left: 31%;
+    left: 30%;
   }
   @media (min-width: 1920px) {
-    left: 36%;
+    left: 35%;
   }
 `;
 
